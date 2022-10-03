@@ -26,4 +26,8 @@ describe("Spec 1", () => {
   it("Test Case 3", () => {
     cy.log("Hello world")
   })
+
+  it.skip("Test Case 4", () => {
+    cy.log("Hello world")
+  })
 })
