@@ -22,4 +22,15 @@ describe("empty spec", () => {
 
     cy.log(add(2, 3).toString());
   });
+
+  it("interfaces", () => {
+    interface User {
+      username: string;
+      password: string;
+    }
+
+    function login(user: User) {
+      console.log(user.username + " " + user.password);
+    }
+  });
 });
