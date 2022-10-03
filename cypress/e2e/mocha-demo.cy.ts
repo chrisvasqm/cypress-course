@@ -23,11 +23,11 @@ describe("Spec 1", () => {
     cy.log("Hello world")
   })
 
-  it("Test Case 3", () => {
+  it.skip("Test Case 3", () => {
     cy.log("Hello world")
   })
 
-  it.skip("Test Case 4", () => {
+  it("Test Case 4", () => {
     cy.log("Hello world")
   })
 })
