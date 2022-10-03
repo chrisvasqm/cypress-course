@@ -1,0 +1,21 @@
+{
+  "name": "cypress-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "javascript",
+    "typescript",
+    "testing"
+  ],
+  "author": "chrisvasqm",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.9.0",
+    "typescript": "^4.8.4"
+  }
+}
