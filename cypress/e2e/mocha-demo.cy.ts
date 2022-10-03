@@ -27,7 +27,7 @@ describe("Spec 1", () => {
     cy.log("Hello world")
   })
 
-  it("Test Case 4", () => {
+  it.only("Test Case 4", () => {
     cy.log("Hello world")
   })
 })
