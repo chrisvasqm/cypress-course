@@ -2,6 +2,7 @@ describe("basics", () => {
   beforeEach(() => {
     cy.visit("/textinput");
   });
+
   it("visit 1", () => {
     cy.log("First visit");
   });
