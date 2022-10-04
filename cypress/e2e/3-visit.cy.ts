@@ -22,4 +22,10 @@ describe("basics", () => {
       expect(title).to.be.equal("Text Input");
     });
   });
+
+  it("text input challenge", () => {
+    const expected = "MESSAGE";
+    cy.get("input#newButtonName").type(expected);
+    cy.get("button#updatingButton").click().should("have.text", expected);
+  });
 });
