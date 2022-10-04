@@ -16,4 +16,10 @@ describe("basics", () => {
       expect(url).to.contains("/textinput");
     });
   });
+
+  it("title validation", () => {
+    cy.title().then((title) => {
+      expect(title).to.be.equal("Text Input");
+    });
+  });
 });
