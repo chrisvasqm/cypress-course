@@ -13,7 +13,7 @@ describe("basics", () => {
 
   it("visit 3", () => {
     cy.url().then((url) => {
-      cy.log(`The current website is: ${url}`);
+      expect(url).to.contains("/textinput");
     });
   });
 });
