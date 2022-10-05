@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "runner": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com"
+    "runner": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com --env message=Message_From_Command"
   },
   "keywords": [
     "cypress",
