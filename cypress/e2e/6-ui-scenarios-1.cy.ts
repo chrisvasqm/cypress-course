@@ -8,6 +8,8 @@ describe("UI Scenarios 1", () => {
   });
 
   it("background color assertion", () => {
-    cy.get("#badButton").click().should("have.css", "background-color", "rgb(40, 167, 69)");
+    cy.get("#badButton")
+      .click()
+      .should("have.css", "background-color", "rgb(40, 167, 69)");
   });
 });
