@@ -17,4 +17,12 @@ describe("Demo QA", () => {
     );
   });
 });
-``;
+
+describe.only("The Internet App", () => {
+  beforeEach(() => {
+    cy.visit(`${Cypress.env("internetapp")}/checkboxes`);
+  });
+  it("Is Checkbox checked?", () => {
+    cy.get("form#checkboxes input").eq(0).click().should('be.checked');
+  });
+});
