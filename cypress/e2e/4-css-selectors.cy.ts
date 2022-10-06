@@ -1,6 +1,6 @@
 describe("Locators", () => {
   beforeEach(() => {
-    cy.visit("/dynamicid");
+    cy.visit(`${Cypress.env("uitestplayground")}/dynamicid`);
   });
 
   it("Contains example", () => {

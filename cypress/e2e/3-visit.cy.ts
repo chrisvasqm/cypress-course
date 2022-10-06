@@ -1,6 +1,6 @@
 describe("basics", () => {
   beforeEach(() => {
-    cy.visit("/textinput");
+    cy.visit(`${Cypress.env("uitestplayground")}/textinput`);
   });
 
   it("visit 1", () => {

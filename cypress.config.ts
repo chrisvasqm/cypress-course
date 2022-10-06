@@ -8,6 +8,7 @@ export default defineConfig({
     },
     env: {
       message: "This is the environment variable",
+      uitestplayground: "http://uitestingplayground.com/"
     },
   },
 });

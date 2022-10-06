@@ -1,6 +1,6 @@
 describe("UI Scenarios 1", () => {
   beforeEach(() => {
-    cy.visit("/click");
+    cy.visit(`${Cypress.env("uitestplayground")}/click`);
   });
 
   it("click assertion", () => {
