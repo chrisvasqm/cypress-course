@@ -13,4 +13,6 @@ describe("Demo QA - Links", () => {
     cy.get("#simpleLink").should("have.attr", "href", "https://demoqa.com");
     cy.get("#simpleLink").should("have.attr", "target", "_blank");
   });
+
+  it("Validating links with requests", () => {});
 });
