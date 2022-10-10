@@ -9,7 +9,7 @@ describe("Demo QA - Links", () => {
     cy.visit(`${Cypress.env("demoQA")}/links`);
   });
 
-  it("Validating links without switching tabs", () => {
+  it("Validating links with HTML attributes", () => {
     cy.get("#simpleLink").should("have.attr", "href", "https://demoqa.com");
     cy.get("#simpleLink").should("have.attr", "target", "_blank");
   });
