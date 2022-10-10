@@ -9,10 +9,15 @@ describe("Demo QA - Links", () => {
     cy.visit(`${Cypress.env("demoQA")}/links`);
   });
 
-  it("Validating links with HTML attributes", () => {
+  it("Validating links by attribute ", () => {
     cy.get("#simpleLink").should("have.attr", "href", "https://demoqa.com");
     cy.get("#simpleLink").should("have.attr", "target", "_blank");
   });
 
-  it("Validating links with requests", () => {});
+  it("Validating links by clicking on it without opening a new tab", () => {
+    cy.get("#simpleLink").invoke("removeAttr", "target").click();
+    cy.url().then((url) => {
+      expect(url).to.be.equal("https://demoqa.com/");
+    });
+  });
 });
