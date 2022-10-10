@@ -18,7 +18,7 @@ describe("Demo QA", () => {
   });
 });
 
-describe.only("The Internet App", () => {
+describe("The Internet App", () => {
   beforeEach(() => {
     cy.visit(`${Cypress.env("internetapp")}/checkboxes`);
   });
