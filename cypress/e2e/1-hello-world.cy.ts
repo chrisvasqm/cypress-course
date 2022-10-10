@@ -1,9 +1,9 @@
-describe("empty spec", () => {
-  it("passes", () => {
+describe("JavaScript and TypeScript Basics", () => {
+  it("Logging a message", () => {
     cy.log("Hello world");
   });
 
-  it("variables", () => {
+  it("Variables and Constants", () => {
     let name: string = "Christian";
     let age: number = 28;
     const isAdult = age >= 18;
@@ -15,22 +15,29 @@ describe("empty spec", () => {
     cy.log(anything);
   });
 
-  it("functions", () => {
+  it("Functions", () => {
     const add = (a: number, b: number): number => {
       return a + b;
     };
 
+    function subsctract(a: number, b: number): number {
+      return a - b;
+    }
+
     cy.log(add(2, 3).toString());
+    cy.log(subsctract(2, 2).toString());
   });
 
-  it("interfaces", () => {
+  it("Objects", () => {
     interface User {
       username: string;
       password: string;
     }
 
     function login(user: User) {
-      console.log(user.username + " " + user.password);
+      cy.log(`${user.username} ${user.password}`);
     }
+
+    login({ username: "John", password: "Doe" });
   });
 });
