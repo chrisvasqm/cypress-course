@@ -16,4 +16,12 @@ describe("Demo QA - Buttons", () => {
       "You have done a double click"
     );
   });
+
+  it("Right click test", () => {
+    cy.get("#rightClickBtn").rightclick();
+    cy.get("#rightClickMessage").should(
+      "have.text",
+      "You have done a right click"
+    );
+  });
 });
