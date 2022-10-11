@@ -1,11 +1,11 @@
 import { defineConfig } from "cypress";
-const { verifyDownloadTasks } = require("cy-verify-downloads");
+const { isFileExist, findFiles } = require("cy-verify-downloads");
 
 export default defineConfig({
   e2e: {
     baseUrl: "http://uitestingplayground.com",
     setupNodeEvents(on, config) {
-      on("task", verifyDownloadTasks);
+      on("task", { isFileExist, findFiles });
     },
     env: {
       message: "This is the environment variable",
