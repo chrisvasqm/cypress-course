@@ -29,4 +29,15 @@ describe("The Internet - JS Alert, Prompt and Confirm Examples", () => {
     cy.on("window:confirm", () => false);
     cy.get("#result").should("have.text", "You clicked: Cancel");
   });
+
+  it("Prompt", () => {
+    cy.window().then((window) => {
+      cy.stub(window, "prompt").returns("Message from the Prompt alert");
+      cy.contains("button", "Click for JS Prompt").click();
+    });
+    cy.get("#result").should(
+      "have.text",
+      "You entered: Message from the Prompt alert"
+    );
+  });
 });
