@@ -23,14 +23,16 @@ describe.skip("Demo QA - Links and Tabs", () => {
 });
 
 describe("Demo QA - Intercepting API Requests", () => {
+  const alias = "linkStatus";
+
   beforeEach(() => {
     cy.visit(`${Cypress.env("demoQA")}/links`);
-    cy.intercept("GET", `${Cypress.env("demoQA")}/created`).as("linkStatus");
+    cy.intercept("GET", `${Cypress.env("demoQA")}/created`).as(alias);
   });
 
   it("201 Created", () => {
     cy.get("#created").click();
-    cy.wait("@linkStatus").then((request) => {
+    cy.wait(`@${alias}`).then((request) => {
       expect(request.response?.statusCode).to.be.equal(201);
       expect(request.response?.statusMessage).to.be.equal("Created");
     });
