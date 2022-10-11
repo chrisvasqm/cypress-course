@@ -10,8 +10,8 @@ describe("JavaScript and TypeScript Basics", () => {
     const anything: any = "Anything" + 1;
 
     cy.log(name);
-    cy.log(age);
-    cy.log(isAdult);
+    cy.log(`${age}`);
+    cy.log(`${isAdult}`);
     cy.log(anything);
   });
 
