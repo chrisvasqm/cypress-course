@@ -20,7 +20,7 @@ describe("Demo QA - Broken Images and Links", () => {
       });
   });
 
-  it("Broken Images", () => {
+  it("Broken Image", () => {
     cy.get(`div > img[src="/images/Toolsqa_1.jpg"]`)
       .should("be.visible")
       .and(($image) => {
