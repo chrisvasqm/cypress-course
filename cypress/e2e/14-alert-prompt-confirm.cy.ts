@@ -14,7 +14,7 @@ describe("The Internet - JS Alert, Prompt and Confirm Examples", () => {
 
   it("Confirm", () => {
     cy.contains("button", "Click for JS Confirm").click();
-    cy.on("window:alert", (message) => {
+    cy.on("window:confirm", (message) => {
       expect(message).to.be.equal("I am a JS Confirm");
     });
     cy.on("window:confirm", () => true);
