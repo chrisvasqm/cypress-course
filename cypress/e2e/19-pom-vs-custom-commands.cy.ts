@@ -19,9 +19,7 @@ describe("POM vs Custom Commands", () => {
   });
 
   it("Login using Custom Commands", () => {
-    cy.get("#userName").type("test");
-    cy.get("#password").type("Test1234*");
-    cy.get("#login").click();
+    cy.login("test", "Test1234*");
     cy.get("div.main-header").should("have.text", "Profile");
   });
 });
