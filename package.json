@@ -15,8 +15,9 @@
   "author": "chrisvasqm",
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.3",
     "cy-verify-downloads": "^0.1.11",
-    "cypress": "^10.9.0",
+    "cypress": "^10.10.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-real-events": "^1.7.1",
     "typescript": "^4.8.4"
