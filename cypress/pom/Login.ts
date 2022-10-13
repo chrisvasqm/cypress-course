@@ -1,6 +1,6 @@
-import Profile from "./Profile";
+import { Profile } from "./Profile";
 
-export default class Login {
+export class Login {
   visit() {
     cy.visit(`${Cypress.env("demoQA")}/login`);
   }

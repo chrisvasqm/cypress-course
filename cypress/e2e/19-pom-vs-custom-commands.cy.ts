@@ -1,4 +1,4 @@
-import Login from "../pom/Login";
+import { Login } from "../pom/Login";
 
 Cypress.on("uncaught:exception", (err, runnable) => {
   // returning false here prevents Cypress from
