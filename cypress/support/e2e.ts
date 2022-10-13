@@ -19,3 +19,11 @@ import "cypress-real-events/support";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+before(() => {
+  cy.log(`I'm a Global Before block`);
+});
+
+after(() => {
+  cy.log(`I'm a Global After block`);
+});
