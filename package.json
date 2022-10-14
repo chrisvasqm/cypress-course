@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open --e2e --browser electron --config baseUrl=http://uitestingplayground.com --env message=Message_From_Command"
+    "cy:open": "cypress open --e2e --browser electron --config baseUrl=http://uitestingplayground.com --env message=Message_From_Command",
+    "cy:run": "cypress run --browser electron --spec cypress/e2e/19-pom-vs-custom-commands.cy.ts"
   },
   "keywords": [
     "cypress",
@@ -20,6 +21,7 @@
     "cy-verify-downloads": "^0.1.11",
     "cypress": "^10.10.0",
     "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.2.3",
     "cypress-real-events": "^1.7.1",
     "typescript": "^4.8.4"
   }
