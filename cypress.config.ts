@@ -22,5 +22,6 @@ export default defineConfig({
       inlineAssets: true,
       saveAllAttempts: false,
     },
+    video: false,
   },
 });
