@@ -8,4 +8,11 @@ describe("Debuggign Basics with Cypress", () => {
     cy.get("#badButton").debug().click();
     cy.get("#badButton").should("have.class", "btn-success");
   });
+
+  it("Using the Pause function", () => {
+    cy.pause();
+    cy.get("#badButton").click();
+    cy.pause();
+    cy.get("#badButton").should("have.class", "btn-success");
+  });
 });
