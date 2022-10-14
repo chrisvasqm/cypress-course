@@ -23,5 +23,6 @@ export default defineConfig({
       saveAllAttempts: false,
     },
     video: false,
+    screenshotOnRunFailure: true,
   },
 });
