@@ -5,6 +5,7 @@ describe("Basic API Testing", () => {
     cy.request("GET", "https://jsonplaceholder.typicode.com/posts").then(
       (response) => {
         cy.log("Response:", response);
+
         expect(response.status).to.be.equal(200);
         expect(response.statusText).to.be.equal("OK");
         expect(response.duration).to.be.lessThan(100);
@@ -13,6 +14,21 @@ describe("Basic API Testing", () => {
         posts.forEach((post: Post) => {
           cy.log(post.title);
         });
+      }
+    );
+  });
+
+  it("GET by ID Request", () => {
+    cy.request("GET", "https://jsonplaceholder.typicode.com/posts/1").then(
+      (response) => {
+        cy.log("Response:", response);
+
+        expect(response.status).to.be.equal(200);
+        expect(response.statusText).to.be.equal("OK");
+        expect(response.duration).to.be.lessThan(100);
+        expect(response.body.title).to.be.equal(
+          "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+        );
       }
     );
   });
@@ -28,6 +44,7 @@ describe("Basic API Testing", () => {
     cy.request("POST", "https://jsonplaceholder.typicode.com/posts", post).then(
       (response) => {
         cy.log("Response: ", response);
+
         expect(response.status).to.be.equal(201);
         expect(response.statusText).to.be.equal("Created");
       }
