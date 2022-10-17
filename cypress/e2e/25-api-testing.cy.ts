@@ -16,4 +16,21 @@ describe("Basic API Testing", () => {
       }
     );
   });
+
+  it("POST Request", () => {
+    const post: Post = {
+      userId: 100,
+      id: 100,
+      title: "Test Title",
+      body: "Test body",
+    };
+
+    cy.request("POST", "https://jsonplaceholder.typicode.com/posts", post).then(
+      (response) => {
+        cy.log(response);
+        expect(response.status).to.be.equal(201);
+        expect(response.statusText).to.be.equal("Created");
+      }
+    );
+  });
 });
