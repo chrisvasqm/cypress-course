@@ -54,4 +54,15 @@ describe("Basic API Testing", () => {
       expect(response.statusText).to.be.equal("OK");
     });
   });
+
+  it("DELETE Request", () => {
+    cy.request("DELETE", "https://jsonplaceholder.typicode.com/posts/10").then(
+      (response) => {
+        cy.log("Response: ", response);
+
+        expect(response.status).to.be.equal(200);
+        expect(response.statusText).to.be.equal("OK");
+      }
+    );
+  });
 });
