@@ -27,7 +27,7 @@ describe("Basic API Testing", () => {
 
     cy.request("POST", "https://jsonplaceholder.typicode.com/posts", post).then(
       (response) => {
-        cy.log(response);
+        cy.log("Response: ", response);
         expect(response.status).to.be.equal(201);
         expect(response.statusText).to.be.equal("Created");
       }
