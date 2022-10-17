@@ -8,12 +8,6 @@ describe("Basic API Testing", () => {
 
         expect(response.status).to.be.equal(200);
         expect(response.statusText).to.be.equal("OK");
-        expect(response.duration).to.be.lessThan(100);
-
-        const posts = response.body;
-        posts.forEach((post: Post) => {
-          cy.log(post.title);
-        });
       }
     );
   });
@@ -25,7 +19,6 @@ describe("Basic API Testing", () => {
 
         expect(response.status).to.be.equal(200);
         expect(response.statusText).to.be.equal("OK");
-        expect(response.duration).to.be.lessThan(100);
         expect(response.body.title).to.be.equal(
           "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
         );
@@ -49,5 +42,16 @@ describe("Basic API Testing", () => {
         expect(response.statusText).to.be.equal("Created");
       }
     );
+  });
+
+  it("PUT Request", () => {
+    cy.request("PUT", "https://jsonplaceholder.typicode.com/posts/10", {
+      title: "test",
+    }).then((response) => {
+      cy.log("Response: ", response);
+
+      expect(response.status).to.be.equal(200);
+      expect(response.statusText).to.be.equal("OK");
+    });
   });
 });
