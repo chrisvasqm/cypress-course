@@ -3,6 +3,7 @@ const { isFileExist, findFiles } = require("cy-verify-downloads");
 
 export default defineConfig({
   e2e: {
+    projectId: "t5z5m7",
     baseUrl: "http://uitestingplayground.com",
     video: false,
     screenshotOnRunFailure: true,
