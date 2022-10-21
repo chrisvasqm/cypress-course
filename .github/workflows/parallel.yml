@@ -1,3 +1,7 @@
+name: Cypress Parallel
+
+on: push
+
 jobs:
   test:
     name: Cypress run
