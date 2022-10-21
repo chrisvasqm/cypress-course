@@ -1,4 +1,4 @@
-jbos:
+jobs:
   test:
     name: Cypress run
     runs-on: ubuntu-20.04
